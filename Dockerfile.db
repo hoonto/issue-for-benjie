@@ -1,0 +1,18 @@
+FROM postgres:11.2
+
+RUN apt-get update \
+    && apt-get install -f -y --no-install-recommends \
+        software-properties-common \
+        build-essential \
+        pkg-config \
+        git \
+        postgresql-server-dev-11
+
+RUN git clone https://github.com/eulerto/wal2json.git \
+    && cd wal2json \
+    && PATH=/usr/bin/pg_config:$PATH \
+    && USE_PGXS=1 \
+    && make \
+    && USE_PGXS=1 \
+    && make install
+

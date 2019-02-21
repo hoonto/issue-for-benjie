@@ -1,0 +1,28 @@
+{
+  "name": "festivalapp-node-api",
+  "version": "1.0.0",
+  "description": "node-api for festivalapp",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "up": "./tools/build.sh && docker-compose up -d && docker-compose logs -f"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbarnhart/festivalapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbarnhart/festivalapp/issues"
+  },
+  "homepage": "https://github.com/nbarnhart/festivalapp#readme",
+  "dependencies": {
+    "@graphile/subscriptions-lds": "^4.3.2-beta.0",
+    "@graphile/supporter": "^0.8.5",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.4",
+    "graphile-utils": "^4.3.2-beta.0",
+    "postgraphile": "^4.3.4-beta.1"
+  }
+}
